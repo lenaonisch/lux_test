@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package onisch.luxofttest;
+package onisch.luxoft.ru;
 
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -17,19 +17,12 @@ public class EffectivityPage extends Page{
     @FindBy(xpath="//blockquote//a")
     private List<WebElement> linksToServices;
     
-    @FindBy(xpath="//div[@id='title']/h1")
-    private WebElement title;
-    
     @FindBy(xpath="//div[@class='headline_image']/img")
     private WebElement headPicture;
     
     public EffectivityPage(WebDriver driver){
         super(driver);
     } 
-    
-    public String getTitle(){
-        return title.getText();
-    }
     
     public boolean isPictureDisplayed(){
         return headPicture.isDisplayed();
