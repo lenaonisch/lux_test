@@ -28,7 +28,7 @@ public class Tests {
     @BeforeMethod
     public void setUp(){
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://luxoft.ru/");
     }
     
